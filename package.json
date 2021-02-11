@@ -1,0 +1,31 @@
+{
+  "name": "udemy-ecommerce-mern-traversy",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jd9913/udemy-ecommerce-MERN-traversy.git"
+  },
+  "author": "jd9913",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jd9913/udemy-ecommerce-MERN-traversy/issues"
+  },
+  "homepage": "https://github.com/jd9913/udemy-ecommerce-MERN-traversy#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
