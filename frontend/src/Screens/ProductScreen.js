@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { Row, Col, ListGroup, Button, ButtonGroup } from "react-bootstrap";
-import products from "../private/master_inventory";
 
 function ProductScreen({ match }) {
-	const product = products.find((p) => p.dataid === match.params.dataid);
+	const [product, setProduct] = useState([]);
+	useEffect(() => {
+		const fetchProduct = async () => {
+			const { data } = await axios.get(`/api/products/${match.params.dataid}`);
+
+			setProduct(data);
+		};
+		fetchProduct();
+	}, [match]);
 
 	return (
 		<>

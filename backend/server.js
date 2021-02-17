@@ -1,0 +1,27 @@
+import express from "express";
+import products from "./data/private/master_inventory.js";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const app = express();
+
+app.get("/", (req, res) => {
+	res.send("API is running....");
+});
+
+app.get("/api/products", (req, res) => {
+	res.json(products);
+});
+
+app.get("/api/products/:dataid", (req, res) => {
+	const product = products.find((p) => p.dataid === req.params.dataid);
+	res.json(product);
+});
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(
+	PORT,
+	console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+);
