@@ -1,1 +1,22 @@
-{}
+{
+  "name": "resource-management-system",
+  "description": "resource management system built with MERN stack",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jd9913/resource-management-system.git"
+  },
+  "author": "jd9913",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jd9913/resource-management-system/issues"
+  },
+  "homepage": "https://github.com/jd9913/resource-management-system#readme"
+}

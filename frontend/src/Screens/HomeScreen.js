@@ -1,5 +1,5 @@
 import React from "react";
-import products from "../master_inventory";
+import products from "../private/master_inventory";
 import { Row, Col } from "react-bootstrap";
 import Product from "../components/Product";
 
