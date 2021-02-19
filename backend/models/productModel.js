@@ -1,9 +1,5 @@
 import mongoose from "mongoose";
 
-const warehouseSchema = mongoose.Schema({
-	name: { type: String, required: true },
-});
-
 const productSchema = mongoose.Schema(
 	{
 		user: {
